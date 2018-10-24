@@ -13,6 +13,7 @@ deployments:
       - mezzanine-project myproject
       - cd myproject
       - sed -i -e 's/ALLOWED_HOSTS.*/ALLOWED_HOSTS = ["*"]/' myproject/settings.py
+      - sed -i -e 's/ALLOWED_HOSTS.*/ALLOWED_HOSTS = ["*"]/' myproject/local_settings.py
       - python manage.py createdb --noinput
     launch_steps:
       python manage.py runserver 0.0.0.0:8000
