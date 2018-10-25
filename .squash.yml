@@ -21,6 +21,6 @@ deployments:
     port_forwarding:
       80:8000
     docker_registry:
-      registry: r.cfcr.io
+      server: r.cfcr.io
       username: wisedrette
       password: $REGISTRY_PASSWORD
