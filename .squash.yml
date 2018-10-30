@@ -1,0 +1,6 @@
+deployments:
+  default:
+    docker_registry:
+      server: r.cfcr.io
+      username: wisedrette
+      password: $REGISTRY_PASSWORD  
