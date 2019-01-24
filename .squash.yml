@@ -18,6 +18,7 @@ deployments:
       - python manage.py createdb --noinput
     launch_steps:
       python manage.py runserver 0.0.0.0:8000
+    run_options: --hostname ${SQUASH_BRANCH_WITH_ID} --env SQUASH_BRANCH=${SQUASH_BRANCH}
     port_forwarding:
       80:8000
     docker_registry:
