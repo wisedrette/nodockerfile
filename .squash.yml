@@ -1,7 +1,7 @@
 deployments:
   default:
-    dockerimage: redmine
-    port_forwarding: 80:3000
+    dockerimage: r.cfcr.io/wisedrette/wisedrette/dockertest:master
+    port_forwarding: 80:80
     docker_registry:
       server: r.cfcr.io
       username: wisedrette
