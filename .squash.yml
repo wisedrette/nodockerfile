@@ -1,4 +1,4 @@
 deployments:
   MyAppName:
-    kubernetes_config: ./pod.yml
+    kubernetes_config: pod.yml, pod2.yml
     deployment_type: kubernetes
