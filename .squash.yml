@@ -2,3 +2,5 @@ deployments:
   MyAppName:
     kubernetes_config: pod.yml, pod2.yml
     deployment_type: kubernetes
+    kubernetes_port_mapping: redmine:3000
+    subdomain_port_mapping: redmine:3000
