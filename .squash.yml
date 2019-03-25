@@ -3,4 +3,6 @@ deployments:
     docker_registry:
       server: r.cfcr.io
       username: wisedrette
-      password: $REGISTRY_PASSWORD  
+      password: $REGISTRY_PASSWORD
+      
+      
