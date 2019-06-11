@@ -1,7 +1,4 @@
 deployments:
   MyAppName:
-    kubernetes_config: pod.yml, pod2.yml
+    kubernetes_helm_chart: stable/odoo
     deployment_type: kubernetes
-    kubernetes_default_image: rss-site
-    kubernetes_port_mapping: redmine:3000
-    subdomain_port_mapping: redmine:3000
