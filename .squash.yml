@@ -4,6 +4,7 @@ deployments:
       - pod.yml
       - pod2.yml
     deployment_type: kubernetes
-    kubernetes_default_image: rss-site
-    kubernetes_port_mapping: redmine:3000
-    subdomain_port_mapping: redmine:3000
+    kubernetes_default_image: redmine
+    kubernetes_port_mapping: rss-site:8080:80
+    subdomain_port_mapping: rss-site:8080
+    port_forwarding: 80:3000
