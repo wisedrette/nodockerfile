@@ -5,3 +5,4 @@ deployments:
   drupal:
     kubernetes_helm_chart: stable/drupal
     deployment_type: kubernetes
+
