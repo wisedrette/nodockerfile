@@ -1,6 +1,7 @@
 deployments:
   odoo:
     kubernetes_helm_chart: stable/odoo
+    kubernetes_helm_parameters: odooPassword=password,postgresql.postgresPassword=secretpassword
     deployment_type: kubernetes
     kubernetes_service: odoo
   drupal:
