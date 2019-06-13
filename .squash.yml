@@ -1,4 +1,7 @@
 deployments:
-  MyAppName:
+  odoo:
     kubernetes_helm_chart: stable/odoo
+    deployment_type: kubernetes
+  drupal:
+    kubernetes_helm_chart: stable/drupal
     deployment_type: kubernetes
