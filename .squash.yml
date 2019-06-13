@@ -1,5 +1,5 @@
 deployments:
   MyAppName:
-    kubernetes_config: ./pod.yml
+    kubernetes_manifest: ./pod.yml
     deployment_type: kubernetes
     kubernetes_default_image: rss-site
