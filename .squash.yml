@@ -8,3 +8,8 @@ deployments:
     kubernetes_helm_chart: stable/drupal
     deployment_type: kubernetes
     kubernetes_service: drupal
+  apache:
+    kubernetes_helm_chart: bitnami/apache
+    deployment_type: kubernetes
+    kubernetes_service: apache
+    kubernetes_helm_repository: bitnami https://charts.bitnami.com/bitnami
