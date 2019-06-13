@@ -3,3 +3,4 @@ deployments:
     dockerimage: ghost
     deployment_type: kubernetes
     use_kubernetes_registry: false
+    port_forwarding: 80:2368
