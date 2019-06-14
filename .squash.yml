@@ -3,4 +3,5 @@ deployments:
     kubernetes_manifest: odoo.yml
     deployment_type: kubernetes
     kubernetes_service: odoo-shop
+    kubernetes_namespace: odoo
     port_forwarding: 80:8069
