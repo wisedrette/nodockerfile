@@ -2,4 +2,4 @@ deployments:
   odoo:
     kubernetes_manifest: odoo.yml
     deployment_type: kubernetes
-    kubernetes_service: odoo
+    kubernetes_service: odoo-shop
