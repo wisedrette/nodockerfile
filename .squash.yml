@@ -1,29 +1,5 @@
 deployments:
   MyAppName:
-    dockerimage:
-      ubuntu:16.04
-    build_steps:
-      - apt-get update && apt-get install -y python python-dev python3.5 python3.5-dev python-pip virtualenv libssl-dev libpq-dev git build-essential libfontconfig1 libfontconfig1-dev
-      - apt-get install -y locales
-      - sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
-      - export LC_ALL=en_US.UTF-8
-      - export LANG=en_US.UTF-8
-      - export LANGUAGE=en_US.UTF-8
-      - pip install setuptools pip --upgrade --force-reinstall
-      - pip install mezzanine
-      - mezzanine-project myproject
-      - cd myproject
-      - sed -i -e 's/ALLOWED_HOSTS.*/ALLOWED_HOSTS = ["*"]/' myproject/settings.py
-      - sed -i -e 's/ALLOWED_HOSTS.*/ALLOWED_HOSTS = ["*"]/' myproject/local_settings.py
-      - python manage.py createdb --noinput
-    launch_steps:
-      python manage.py runserver 0.0.0.0:8000
-    run_options: --hostname ${SQUASH_BRANCH_WITH_ID} --env SQUASH_BRANCH=${SQUASH_BRANCH}
-    port_forwarding:
-      80:8000
-    docker_registry:
-      server: r.cfcr.io
-      username: wisedrette
-      password: $REGISTRY_PASSWORD
-    environment:
-      TEST_VAL=$REGISTRY_PASSWORD
+    dockerimage: redis
+    port_forwarding: 6379:6379
+    check_service_ports: 6379
