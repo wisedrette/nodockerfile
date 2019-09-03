@@ -3,4 +3,5 @@ deployments:
     dockerimage: redis
     port_forwarding: 6379:6379
     check_service_ports: 6379, 80
-    subdomain_port_mapping: redis:80
+    subdomain_port_mapping: 
+      - redis:80
