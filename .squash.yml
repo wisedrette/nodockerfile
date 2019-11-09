@@ -5,3 +5,10 @@ deployments:
     kubernetes_service: odoo-shop
     kubernetes_namespace: odoo
     port_forwarding: 80:8069
+    pipelines:
+      - default:
+          scripts:
+            - echo "#!/bin/sh" > /script.sh
+            - echo "ls -la" >> /script.sh
+            - chmod a+x /script.sh
+            - /script.sh
