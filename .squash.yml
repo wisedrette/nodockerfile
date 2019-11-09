@@ -4,7 +4,7 @@ deployments:
     deployment_type: kubernetes
     kubernetes_service: odoo-shop
     kubernetes_namespace: odoo
-    port_forwarding: 80:8069
+    port_forwarding: 8069:8069
     pipelines:
       - default:
           scripts:
