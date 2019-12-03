@@ -1,8 +1,5 @@
 deployments:
   default:
-    dockerimage: r.cfcr.io/wisedrette/wisedrette/dockertest:master
+    dockerimage: redmine:latest
     port_forwarding: 80:80
-    docker_registry:
-      server: r.cfcr.io
-      username: wisedrette
-      password: $REGISTRY_PASSWORD  
+    ready_wait: 30
