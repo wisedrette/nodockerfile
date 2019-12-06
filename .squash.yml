@@ -1,7 +1,8 @@
 deployments:
   odoo:
     kubernetes_helm_chart: stable/odoo
-    kubernetes_helm_parameters: odooPassword=${ODOO_PASSWORD}
+    kubernetes_helm_parameters: 
+      stable/odoo: odooPassword=${ODOO_PASSWORD},odooUser=root,odooUserEmail=root@com.com
     deployment_type: kubernetes
     kubernetes_service: odoo
   drupal:
