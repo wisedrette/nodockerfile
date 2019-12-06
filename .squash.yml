@@ -1,7 +1,8 @@
 deployments:
   odoo:
     kubernetes_helm_chart: bitnami/odoo
-    kubernetes_helm_parameters: odooPassword=password,odooUser=root,odooUserEmail=root@com.com
+    kubernetes_helm_parameters: 
+      bitnami/odoo: odooPassword=password,odooUser=root,odooUserEmail=root@com.com
     deployment_type: kubernetes
     kubernetes_service: odoo
     kubernetes_helm_repository: bitnami https://charts.bitnami.com/bitnami    
