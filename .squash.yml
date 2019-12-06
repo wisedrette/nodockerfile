@@ -19,6 +19,6 @@ deployments:
   airflow:
     kubernetes_helm_chart: bitnami/airflow
     deployment_type: kubernetes
-    kubernetes_helm_parametes: service.port=80
+    kubernetes_helm_parametes: service.port=80,airflow.auth.username=my-user,airflow.auth.password=my-password
     kubernetes_service: airflow
     kubernetes_helm_repository: bitnami https://charts.bitnami.com/bitnami
