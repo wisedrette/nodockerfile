@@ -8,7 +8,7 @@ deployments:
   drupal:
     kubernetes_helm_chart: stable/drupal
     deployment_type: kubernetes
-    kubernetes_helm_parameters: drupalPassword=$ODOO_PASSWORD
+    kubernetes_helm_parameters: drupalPassword=password
     kubernetes_service: drupal
   apache:
     kubernetes_helm_chart: bitnami/apache
