@@ -1,0 +1,3 @@
+deployments:
+  default:
+    build_options: --build-arg SQUASH_REGISTRY=$SQUASH_REGISTRY
