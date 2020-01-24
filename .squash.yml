@@ -1,3 +1,0 @@
-deployments:
-  MyAppName:
-    dockerimage: ${SQUASH_REGISTRY}:docker-test-PI-{SQUASH_MATCH_BRANCH}
