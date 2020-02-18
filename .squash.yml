@@ -17,10 +17,13 @@ deployments:
       - sed -i -e 's/ALLOWED_HOSTS.*/ALLOWED_HOSTS = ["*"]/' myproject/local_settings.py
       - python manage.py createdb --noinput
     launch_steps:
+      # This is a dummy command as an example of never-ending foreground command. 
+      # Using this will cause build to fail because Squash will wait for the completion of this command.
+      # So if there is a need to launch such commands, it should be done in "launch_steps" instead    
       python manage.py runserver 0.0.0.0:8000
     run_options: --hostname ${SQUASH_BRANCH_WITH_ID} --env SQUASH_BRANCH=${SQUASH_BRANCH}
     port_forwarding:
-      80:8000
+      80:8000  # added for this sample since server is launched on port 8000 inside the container
     docker_registry:
       server: r.cfcr.io
       username: wisedrette
