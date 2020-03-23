@@ -4,7 +4,7 @@ deployments:
       python:3.8-alpine
     shell: sh
     build_steps:
-      - apt-get update && apt-get install -y git build-essential locales
+      - apk update && apk upgrade && apk add --no-cache bash git openssh build-essential locales
       - sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
       - export LC_ALL=en_US.UTF-8
       - export LANG=en_US.UTF-8
