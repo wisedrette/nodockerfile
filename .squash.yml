@@ -1,10 +1,10 @@
 deployments:
   MyAppName:
     dockerimage:
-      ubuntu:16.04
+      python:3.8-alpine
+    shell: sh
     build_steps:
-      - apt-get update && apt-get install -y python python-dev python3.5 python3.5-dev python-pip virtualenv libssl-dev libpq-dev git build-essential libfontconfig1 libfontconfig1-dev
-      - apt-get install -y locales
+      - apt-get update && apt-get install -y git build-essential locales
       - sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
       - export LC_ALL=en_US.UTF-8
       - export LANG=en_US.UTF-8
