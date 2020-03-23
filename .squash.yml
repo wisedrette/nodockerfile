@@ -4,11 +4,7 @@ deployments:
       python:3.8-alpine
     shell: sh
     build_steps:
-      - apk update && apk upgrade && apk add --no-cache bash git openssh build-essential locales
-      - sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && locale-gen
-      - export LC_ALL=en_US.UTF-8
-      - export LANG=en_US.UTF-8
-      - export LANGUAGE=en_US.UTF-8
+      - apk update && apk upgrade && apk add --no-cache bash git openssh
       - pip install setuptools pip --upgrade --force-reinstall
       - pip install mezzanine
       - mezzanine-project myproject
@@ -18,7 +14,6 @@ deployments:
       - python manage.py createdb --noinput
     launch_steps:
       python manage.py runserver 0.0.0.0:8000
-    run_options: --hostname ${SQUASH_BRANCH_WITH_ID} --env SQUASH_BRANCH=${SQUASH_BRANCH}
     port_forwarding:
       80:8000
 
